@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.card {
+  background-color: #eeeeee;
+  border: 4px solid beige;
+  margin: 15px 15px 15px 0;
+  height: 300px;
+  border-radius: 5%;
+}
+.card-img-top {
+  width: 125px;
+  height: 125px;
+  text-align: center;
+  margin: 0 60px 0 60px;
+  background-color: #c7ddef;
+}
+
+.picownerimg {
+  width: 25px;
+  margin-left: 30px;
+}
+
+.card-block {
+  margin-top: 30px;
+}
+
+.card-bottom {
+  margin-top: 60px;
+}
+
+.like-block {
+  margin-left: 40px;
+}
+
+.deletepic{
+  margin-left: 20px;
+}

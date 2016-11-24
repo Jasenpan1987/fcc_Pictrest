@@ -1,0 +1,29 @@
+<% include partials/head.ejs %>
+<body>
+  <% include partials/navbar.ejs %>
+  <h2>All Pics</h2>
+
+  <div class="container">
+    <div class="row">
+
+      <%for(var i=0, x=pics.length; i<x; i++){%>
+      <div class="card col-md-3">
+        <img class="card-img-top" onerror="this.src='/images/placeholder.png'"
+             src="<%=pics[i].url%>" alt="Card image cap"
+        >
+        <div class="card-block">
+          <h4 class="card-title text-center"><%=pics[i].title%></h4>
+          <div class="card-bottom">
+            <img class="picownerimg" src="<%=pics[i].owner.twitter.avatarUrl%>" alt="user avatar"><span>
+                  <%=pics[i].owner.twitter.displayName%></span>
+            <a href="/pic/like?imgid=<%=pics[i].id%>" class="like-block">
+              <i class="fa fa-thumbs-o-up"></i>  Like <span id="likes"><%=pics[i].likes%></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </div>
+</body>
+<% include partials/tail.ejs %>

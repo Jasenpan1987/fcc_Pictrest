@@ -1,0 +1,28 @@
+<% include partials/head.ejs %>
+<body>
+<% include partials/navbar.ejs %>
+<h2>My Pics</h2>
+
+<div class="container">
+    <div class="row">
+
+        <%for(var i=0, x=pics.length; i<x; i++){%>
+        <div class="card col-md-3">
+            <img class="card-img-top" onerror="this.src='/images/placeholder.png'"
+                 src="<%=pics[i].url%>" alt="Card image cap"
+            >
+            <div class="card-block">
+                <h4 class="card-title text-center"><%=pics[i].title%></h4>
+                <div class="card-bottom">
+                    <img class="picownerimg" src="<%=pics[i].owner.twitter.avatarUrl%>" alt="user avatar"><span>
+                  <%=pics[i].owner.twitter.displayName%></span>
+
+                    <a href="/pic/delete?imgid=<%=pics[i].id%>" class="btn btn-danger btn-sm deletepic">Delete</a>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</div>
+</body>
+<% include partials/tail.ejs %>
